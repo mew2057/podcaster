@@ -1,0 +1,38 @@
+name: Podcaster
+version: 0.0.1
+description: A Theme for podcasters
+icon:  group
+author:
+  name: John Dunham
+  email: JFDBear1@gmail.com
+  url:  https://johndunhamgames.com
+homepage: https://github.com/mew2057/podcaster
+demo: https://cryptopediacast.com
+keywords:  theme, modern, fast, responsive, html5, css3
+bugs: https://github.com/mew2057/podcaster/issues
+license: MIT
+
+dependencies:
+    - { name: grav, version: '>=1.4.0' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    color:
+        type: text
+        size: medium
+        label: Color
+        default: 'blue'
+        validate:
+          type: text
