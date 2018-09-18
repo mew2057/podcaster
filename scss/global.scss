@@ -1,0 +1,11 @@
+$primary: #E56E4F;
+$secondary: #F6783F;
+$secondary-dark: #f15e1c;
+$background: #505A5E;
+$header-background: #404c63;
+$background-light: #a7a7a7;
+$text-muted: #222;
+
+@import "../../agency/scss/bootstrap.min.scss";
+@import "../../agency/scss/agency.scss";
+@import "podcaster.scss";

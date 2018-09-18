@@ -1,0 +1,28 @@
+.navbar-default .navbar-brand {
+    font-family: "Gloria Hallelujah","Helvetica Neue",Helvetica,Arial,cursive;
+    color: $primary;
+}
+
+body {  
+    background-color:$background;
+}
+
+header { 
+    background-color: $header-background;
+}
+
+.bg-light-gray { 
+    background-color: $background-light;
+}
+
+.text-muted{
+    color: $text-muted;
+}
+
+h1{
+    color: $primary;
+}
+
+h3 {
+    color: white;
+}

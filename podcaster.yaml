@@ -9,3 +9,13 @@ sticky-footer: true
 spectre:
   exp: false
   icons: false
+
+streams:
+ schemes:
+   theme:
+     type: ReadOnlyStream
+     prefixes:
+       '':
+         - user/themes/podcaster
+         - user/themes/agency
+         
