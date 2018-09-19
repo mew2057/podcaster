@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .navbar-default .navbar-brand {
     font-family: "Gloria Hallelujah","Helvetica Neue",Helvetica,Arial,cursive;
     color: $primary;
@@ -25,4 +27,18 @@ h1{
 
 h3 {
     color: white;
+}
+
+section#contact h2 {
+    color: $primary;
+}
+
+.text-muted-light {
+    color: white;
+}
+
+a.subscription-button i:hover,
+a.subscription-button i:focus,
+a.subscription-button i:active {
+    background-color: $header-background;
 }

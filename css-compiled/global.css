@@ -6031,7 +6031,7 @@ header {
   background-color: #404c63; }
 
 .bg-light-gray {
-  background-color: #a7a7a7; }
+  background-color: #636363; }
 
 .text-muted {
   color: #222; }
@@ -6041,5 +6041,16 @@ h1 {
 
 h3 {
   color: white; }
+
+section#contact h2 {
+  color: #E56E4F; }
+
+.text-muted-light {
+  color: white; }
+
+a.subscription-button i:hover,
+a.subscription-button i:focus,
+a.subscription-button i:active {
+  background-color: #404c63; }
 
 /*# sourceMappingURL=global.css.map */
