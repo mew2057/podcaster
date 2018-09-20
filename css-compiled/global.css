@@ -6028,7 +6028,10 @@ body {
   background-color: #505A5E; }
 
 header {
-  background-color: #404c63; }
+  background-color: #404c63;
+  background-image: url(../img/header-bg.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat; }
 
 .bg-light-gray {
   background-color: #636363; }
@@ -6052,5 +6055,10 @@ a.subscription-button i:hover,
 a.subscription-button i:focus,
 a.subscription-button i:active {
   background-color: #404c63; }
+
+.intro-text-box {
+  padding: .5%;
+  background-color: #1f2a40d9;
+  border-radius: 25px; }
 
 /*# sourceMappingURL=global.css.map */

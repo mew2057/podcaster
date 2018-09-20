@@ -11,10 +11,15 @@ body {
 
 header { 
     background-color: $header-background;
+    background-image: url(../img/header-bg.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
 }
 
 .bg-light-gray { 
     background-color: $background-light;
+
 }
 
 .text-muted{
@@ -41,4 +46,10 @@ a.subscription-button i:hover,
 a.subscription-button i:focus,
 a.subscription-button i:active {
     background-color: $header-background;
+}
+
+.intro-text-box {
+    padding: .5%;
+    background-color: #1f2a40d9;
+    border-radius: 25px;
 }
