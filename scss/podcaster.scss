@@ -34,7 +34,10 @@ h3 {
     color: white;
 }
 
-section#contact h2 {
+section#contact-sect {
+    background-color: #222;
+}
+section#contact-sect h2 {
     color: $primary;
 }
 
@@ -42,14 +45,24 @@ section#contact h2 {
     color: white;
 }
 
-a.subscription-button i:hover,
-a.subscription-button i:focus,
-a.subscription-button i:active {
-    background-color: $header-background;
-}
-
 .intro-text-box {
     padding: .5%;
-    background-color: #1f2a40d9;
+    background-color: #1f2a40f5;
     border-radius: 25px;
+}
+
+a.subscription-button i {  
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.contact-image{
+    pointer-events: none;
+}
+
+a.subscription-button span i:hover,
+a.subscription-button span i:focus,
+a.subscription-button span i:active {
+    color: #444;
 }
