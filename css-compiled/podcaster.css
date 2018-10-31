@@ -23,6 +23,9 @@ h1 {
 h3 {
   color: white; }
 
+.team-description {
+  color: white; }
+
 section#contact-sect {
   background-color: #222; }
 
@@ -31,6 +34,11 @@ section#contact-sect h2 {
 
 .text-muted-light {
   color: white; }
+
+.team-description {
+  padding: 5%;
+  background-color: #1f2a40f5;
+  border-radius: 25px; }
 
 .intro-text-box {
   padding: .5%;
