@@ -1,0 +1,24 @@
+{% extends 'partials/john-base.html.twig' %}
+
+
+
+
+{% block content %}
+    {{ page.content }}
+    <div class="about" >
+        {% for module in page.collection() %}
+            {% if module.blueprintName() != "modular/project" %}
+                {{ module.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+
+    <div class="projects" >
+        {% for module in page.collection() %}
+            {% if module.blueprintName() == "modular/project" %}
+                {{ module.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

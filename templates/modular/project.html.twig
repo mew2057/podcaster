@@ -1,0 +1,57 @@
+{% set baseid = page.header.title | replace(' ', '-') | replace('.','-') %}
+<div id="{{ baseid }}-card"  class="card-1"
+    onclick='expandElement("{{ baseid }}");'>
+    
+   
+
+    <div id="{{ baseid }}-visible" class="project-visible">
+
+        <div class="project-header">
+        
+            <h3> {{ page.header.title }}  </h3>
+            <h7> {{ page.header.timerange }}</h7>
+        </div>
+        
+        <img src="{{ page.media[page.header.thumb].url }}" 
+            class="img-responsive  img-project" alt="" 
+            id="{{ baseid }}-thumb"
+             />
+        
+       
+    </div>
+    <div id="{{ baseid }}" class="project-content">   
+        <a href="#{{ baseid }}-card" class="subscription-button card-exit" 
+            id="{{baseid}}-close"
+            onclick='hideElements("{{ baseid }}")' style="padding-left=0">
+            <span class="fa-stack fa-2x" style="padding-left=0">
+                <i class="fa fa-times fa-stack-1x fa-inverse contact-image" style="padding-left=0"></i>
+            </span>
+        </a>
+        
+        
+        <h6>Status   : {{ page.header.status }} </h6>
+        <h6>Team     : {{ page.header.team }}   </h6>
+        <h6>Tools    : {{ page.header.tools }}  </h6>
+        <h6>Platform : {{ page.header.plat }}   </h6>
+        
+        <div class="project-links">
+            {% for link in page.header.links %}
+                
+                {% if link.icon and link.url %}
+                    <a href="{{ link.url }}" target="_blank" class=" project-link">
+                        <span>
+                            <span class="fa-stack fa-1x">
+                                <i class="fa fa-{{ link.icon }} fa-stack-1x "></i>
+                            </span>
+                            {{ link.text }}
+                        </span>
+                    </a>
+                {% endif %}
+
+            {% endfor %}      
+        </div>       
+        
+        
+        {{ content }}
+    </div>
+</div>

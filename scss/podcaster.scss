@@ -52,7 +52,7 @@ section#contact-sect h2 {
 .team-description{
     padding: 5%;
     background-color: #1f2a40f5;
-        border-radius: 25px;
+    border-radius: 25px;
 
 }
 
@@ -76,4 +76,134 @@ a.subscription-button span i:hover,
 a.subscription-button span i:focus,
 a.subscription-button span i:active {
     color: #444;
+}
+
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    background: $header-background;
+
+}
+
+
+.projects {
+    display: flex;
+    flexDirection: 'row wrap';
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+ 
+}
+
+
+.card-1 {
+    background-color: #1f2a40ff;
+    overflow: hidden;
+    border-radius: 2px;
+    
+    margin: 1rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    align-items: stretch;
+    position: relative;
+    align-self: flex-start;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.card-1:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.project-content{
+    color: white;
+    display: none;
+    overflow: hidden;
+    padding: 1%;
+}
+
+.project-header {
+    padding: .25% 1% 1% 1%;
+    height: fit-content;  
+    width: 80%;
+}
+
+.card-exit{
+    display: none;
+    opacity: .5;
+    position: absolute;
+    text-align: right;
+    top: 0px;
+    right: 0;
+    z-index: 9999;
+}
+.card-exit:hover{
+    cursor: pointer;
+}
+
+.project-links{
+    margin: 1% 0% 1% 0%;
+}
+
+.project-link,
+.project-link:visited,
+.project-link:active,
+.project-link:focus{
+
+    background: $secondary;
+    margin: 1% 1% 1% 0%;
+    padding: .25% .75% .25% .1% ;
+    color: white;
+    border-radius: 5px;
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    text-decoration: None;
+
+    
+}
+
+.project-link:hover{
+    color: $secondary;
+    background: $background-light;
+    text-decoration: None;
+
+}
+
+.description-visible{
+    display: block;
+    z-index: 9999; 
+    width: 100%; 
+   
+    margin:0;
+    overflow:auto;
+}
+
+
+img.description-visible
+{
+    display: None;
+}
+
+a.description-visible
+{
+    display: block;
+}
+
+.img-project {
+    width:100%;
+}
+
+span
+{
+    white-space:nowrap
 }
