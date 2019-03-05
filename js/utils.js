@@ -3,8 +3,9 @@ var ActiveElement=null;
 function initEvents()
 {
     window.onhashchange = function() {
-        if ( ActiveElement !== null )
+        if ( ActiveElement !== null && window.location.hash == "" )
         {
+
             hideElements(ActiveElement);
         }
     }
@@ -41,11 +42,15 @@ function expandElement(id)
         element = document.getElementById(id + "-close")
         element.classList.add("description-visible")     
         
-        window.location.href = "#"+ id + "-card"
+	if(window.location.hash != '') {
+	  history.back();
+	}
+
         window.scrollTo(0,0);
         
         $("#" + id + "-card").one($.support.transition.end,
             function() {
+		window.location.href = "#"+ id + "-card"; 
                 ActiveElement=id;
         });
     }
