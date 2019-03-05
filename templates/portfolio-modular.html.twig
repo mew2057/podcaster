@@ -1,9 +1,10 @@
-{% extends 'partials/john-base.html.twig' %}
-
+{% extends 'partials/portfolio-base.html.twig' %}
 
 
 
 {% block content %}
+    <div onload="initEvents()"> </div>
+
     {{ page.content }}
     <div class="about" >
         {% for module in page.collection() %}
@@ -22,3 +23,4 @@
         {% endfor %}
     </div>
 {% endblock %}
+
