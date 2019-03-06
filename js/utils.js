@@ -1,4 +1,6 @@
 var ActiveElement=null;
+var WindowOffset=null;
+
 
 function initEvents()
 {
@@ -25,32 +27,38 @@ function expandElement(id)
             return
         }   
         
+        // Cache the window offset.
+        WindowOffset = window.pageYOffset
+
+
         $('.card-1').hide();
         $('.about-me').hide();
         $("#" + id + "-card").show();
         
         
-        element.classList.add("description-visible")
+        element.classList.add("description-visible");
 
         
-        element = document.getElementById(id + "-card")
-        element.classList.add("description-visible")
+        element = document.getElementById(id + "-card");
+
+        element.classList.add("description-visible");
+
         
-        element = document.getElementById(id + "-thumb")
-        element.classList.add("description-visible")
+        element = document.getElementById(id + "-thumb");
+        element.classList.add("description-visible");
         
-        element = document.getElementById(id + "-close")
-        element.classList.add("description-visible")     
+        element = document.getElementById(id + "-close");
+        element.classList.add("description-visible"); 
         
-	if(window.location.hash != '') {
-	  history.back();
-	}
+        if(window.location.hash != '') {
+          history.back();
+        }
 
         window.scrollTo(0,0);
         
         $("#" + id + "-card").one($.support.transition.end,
             function() {
-		window.location.href = "#"+ id + "-card"; 
+                window.location.href = "#"+ id + "-card"; 
                 ActiveElement=id;
         });
     }
@@ -63,7 +71,7 @@ function hideElements(id)
     $('.card-1').show();
     $('.about-me').show();
 
-    var elements = document.getElementsByClassName("description-visible")
+    var elements = document.getElementsByClassName("description-visible");
     if ( elements &&  elements.length > 0 )
     {
         for (var i=elements.length-1; i >=0; i--) {
@@ -72,8 +80,8 @@ function hideElements(id)
     }
     var element = document.getElementById(id);
     element.classList.add("just-hid");
-    window.location.href = "#"+ id + "-card"
-
+    window.scrollTo(0,WindowOffset);
+    
     $("#" + id + "-card").one($.support.transition.end,
         function() {
             document.getElementById(id + "-card").scrollIntoView({behavior: "smooth"});
